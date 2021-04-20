@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from bac_class.models import *
-from major_project.urls import bac
+from major_project import urls
 from keras.preprocessing.image import load_img
 from keras.preprocessing.image import img_to_array
 import numpy as np
@@ -21,7 +21,7 @@ def index(request):
         image = img_to_array(image)
         image = np.expand_dims(image, axis=0)
 
-        prediction = bac.predict(image)
+        prediction = urls.bac.predict(image)
 
         if prediction[0][0] == 1:
             print('Clostridium.perfringens')
