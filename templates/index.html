@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Animated image upload form</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="uploadWrapper">
+  <form id="imageUploadForm" class="imageUploadForm" method="POST">
+    <span class="helpText" id="helpText">Upload an image</span>
+    <input type='file' name="bac_image" accept="image/*" required/>
+    <!-- <div id="uploadedImg" class="uploadedImg"> -->
+    <button type="submit">Upload</button>
+
+      <span class="unveil"></span>
+    </div>
+    <span class="pickFile">
+      <a href="#" class="pickFileButton" type="submit">Pick file</a>
+    </span>
+  </form>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="{% static 'script.js' %}"></script>
+
+</body>
+</html>
