@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from bac_class.models import *
-from major_project.urls import *
+from major_project.urls import bac
 from keras.preprocessing.image import load_img
 from keras.preprocessing.image import img_to_array
 import numpy as np
