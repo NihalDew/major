@@ -7,6 +7,7 @@ import numpy as np
 from keras.models import Model
 from keras.layers import *
 import tensorflow as tf
+from PIL import Image as im
 
 # Create your views here.
 def index(request):
@@ -14,12 +15,18 @@ def index(request):
         print(request.FILES['bac_image'])
         im_obj = bac_image_store()
         im_obj.image = request.FILES['bac_image']
+
+
         im_obj.save()
 
         dir = '/root/major/media/images/' + request.FILES['bac_image'].name
-        image = load_img(dir)
+        image = im.open(im_obj.image)
+        image = image.resize((299,299))
+
+        image = load_img(image)
         image = img_to_array(image)
         image = np.expand_dims(image, axis=0)
+        image = (1./255)*image
 
         prediction = urls.bac.predict(image)
 
