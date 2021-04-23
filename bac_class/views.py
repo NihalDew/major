@@ -23,7 +23,7 @@ def index(request):
         image = im.open(im_obj.image)
         image = image.resize((299,299))
 
-        image = load_img(image)
+        # image = load_img(image)
         image = img_to_array(image)
         image = np.expand_dims(image, axis=0)
         image = (1./255)*image
