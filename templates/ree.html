@@ -27,12 +27,12 @@
                 <img src="https://res.cloudinary.com/mhmd/image/upload/v1564991372/image_pxlho1.svg" alt="" width="150" class="mb-4">
             </header>
         
-            <div class="row">
+            <div class="row" id="hide">
                 <div class="col-lg-6 mx-auto">
                     <p class="font-italic text-white text-center" style="font-size: 27px;">{{ result }}</p>
                 </div>
             </div>
-
+           
 
             <div class="row py-4">
                 <div class="col-lg-6 mx-auto">
@@ -73,5 +73,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../static/new.js"> </script>
 
+    {% if result %}
+    <script>setTimeout(() => {
+       $('#hide').remove(); }, 4000 )  </script>
+    {% endif %}
     </body>
 </html>
