@@ -26,4 +26,4 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 from keras.models import load_model
-bac = load_model('bac_model.h5')
+bac = load_model('bac_model_major_project_on_28_apr.h5')
