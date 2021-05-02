@@ -10,6 +10,6 @@ tensorflow-hub==0.10.0
 tensorflow-metadata==0.26.0
 tensorflow-privacy==0.2.2
 tensorflow-probability==0.11.0
-pil
+pillow
 gunicorn
 psycopg2-binary
