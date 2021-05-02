@@ -6,10 +6,7 @@ tensorboard==2.4.0
 tensorboard-plugin-wit==1.7.0
 tensorboardcolab==0.0.22
 tensorflow-cpu
-tensorflow-addons==0.8.3
-tensorflow-datasets==4.0.1
 tensorflow-estimator==2.4.0
-tensorflow-gcs-config==2.4.0
 tensorflow-hub==0.10.0
 tensorflow-metadata==0.26.0
 tensorflow-privacy==0.2.2
