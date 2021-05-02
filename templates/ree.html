@@ -29,7 +29,8 @@
         
             <div class="row" id="hide">
                 <div class="col-lg-6 mx-auto">
-                    <p class="font-italic text-white text-center" style="font-size: 27px;">{{ result }}</p>
+                    <!-- <p class="font-italic text-white text-center" style="font-size: 27px;">{{ result }}</p> -->
+                    <p class="font-italic text-white text-center" style="font-size: 27px;">Escherichia.coli</p>
                 </div>
             </div>
            
@@ -39,7 +40,7 @@
         
                     <!-- Upload image input-->
                     <form action="" method="POST" enctype="multipart/form-data">
-                        {% csrf_token %}
+                        <!-- {% csrf_token %} -->
                         <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
                             <input id="upload" type="file"  name="bac_image" class="form-control border-0">
                             <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
@@ -73,9 +74,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../static/new.js"> </script>
 
-    {% if result %}
-    <script>setTimeout(() => {
-       $('#hide').remove(); }, 4000 )  </script>
-    {% endif %}
+    <!-- {% if result %} -->
+    <!-- <script>setTimeout(() => {
+       $('#hide').remove(); }, 4000 )  </script> -->
+    <!-- {% endif %} -->
     </body>
 </html>

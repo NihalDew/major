@@ -30,15 +30,36 @@ def index(request):
 
         prediction = urls.bac.predict(image)
 
-        if prediction[0][0] == 1:
+        # for printing result
+        a = 0
+        for i in prediction:
+            a = i
+        b = list(a)
+        r = b.index(max(b))
+        if r == 0:
+            print('Acinetobacter.baumanii')
+            p = 'Acinetobacter.baumanii'
+
+        elif r == 1:
+            print('Actinomyces.israeli')
+            p = 'Actinomyces.israeli'
+
+        elif r == 2:
             print('Clostridium.perfringens')
             p = 'Clostridium.perfringens'
-        elif prediction[0][1] == 1:
+
+        elif r == 3:
             print('Escherichia.coli')
             p = 'Escherichia.coli'
-        elif prediction[0][2] == 1:
-            print('Proteus')
-            p = 'Proteus'
+
+        elif r == 4:
+            print('Neisseria.gonorrhoeae')
+            p = 'Neisseria.gonorrhoeae'
+
+        elif r == 5:
+            print('Proteus.vulgaris')
+            p = 'Proteus.vulgaris'
+
         else:
             print('Staphylococcus.epidermidis')
             p = 'Staphylococcus.epidermidis'
